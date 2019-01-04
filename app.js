@@ -90,6 +90,7 @@ bot.dialog('OrderDialog',
         var intent = args.intent;
         var vc = builder.EntityRecognizer.findEntity(intent.entities, 'Variety of Curry');
         session.send('あいよ！'+vc.entity+'ね！', session.message.text);
+        session.send('Happy New year 2019!', session.message.text);
         session.send('You reached the Order intent. You said \'%s\'.', session.message.text);
 //        session.send('You reached the Order intent. Your order is '+vc+' curry', session.message.text);
         session.endDialog();
